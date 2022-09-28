@@ -4,8 +4,12 @@ import sign.Sign;
 
 import java.time.Month;
 import java.time.MonthDay;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-public class Gemeos implements Sign {
+public class Gemeos extends Sign {
 
     @Override
     public MonthDay getStartDate() {
@@ -18,7 +22,25 @@ public class Gemeos implements Sign {
     }
 
     @Override
+    protected Map<Integer, String> getSortedRisingSign() {
+        return new HashMap<>() {{
+            put(0, "Áries");
+            put(2, "Touro");
+            put(4, "Gêmeos");
+            put(6, "Câncer");
+            put(8, "Leão");
+            put(10, "Virgem");
+            put(12, "Libra");
+            put(14, "Escorpião");
+            put(16, "Sagitário");
+            put(18, "Capricórnio");
+            put(20, "Aquário");
+            put(22, "Peixes");
+        }};
+    }
+
+    @Override
     public String toString() {
-        return "Gemeos";
+        return "Gêmeos";
     }
 }
