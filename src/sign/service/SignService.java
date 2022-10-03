@@ -2,7 +2,6 @@ package sign.service;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.Set;
 
 public class SignService {
 
@@ -19,16 +18,7 @@ public class SignService {
     }
 
     public ZoneOffset timeZone(LocalDateTime localDateTime, String zone) {
-        Set<String> zones = ZoneId.getAvailableZoneIds();
-
-        for (String z : zones) {
-            if (z.contains(zone)) {
-                ZoneId zoneId = ZoneId.of(z);
-                return zoneId.getRules().getOffset(localDateTime);
-            }
-        }
-
-        throw new IllegalArgumentException("Zone not found for zone = " + zone);
+        return ZoneId.of(zone).getRules().getOffset(localDateTime);
     }
 
 }
