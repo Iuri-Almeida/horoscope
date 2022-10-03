@@ -40,13 +40,19 @@ public class Main {
 
                 Sign sign = new SignFactory().create(MonthDay.of(localDateTime.getMonth(), localDateTime.getDayOfMonth()));
 
-                colorService.green("\nAge: " + signService.getAge(localDateTime));
-                colorService.green("\nLeap Year: " + signService.isLeapYear(localDateTime));
-                colorService.green("\nDate formatted: " + signService.format(localDateTime));
-                colorService.green("\nTime Zone: " + signService.timeZone(localDateTime, zone));
+                colorService.green("\nAge: ");
+                colorService.cyan("" + signService.getAge(localDateTime));
+                colorService.green("\nLeap Year: ");
+                colorService.cyan("" + signService.isLeapYear(localDateTime));
+                colorService.green("\nDate formatted: ");
+                colorService.cyan("" + signService.format(localDateTime));
+                colorService.green("\nTime Zone: ");
+                colorService.cyan("" + signService.timeZone(localDateTime, zone));
 
-                colorService.green("\n\nSign: " + sign);
-                colorService.green("\nRising Sign: " + sign.getRisingSign(localDateTime.toLocalTime()));
+                colorService.green("\n\nSign: ");
+                colorService.cyan("" + sign);
+                colorService.green("\nRising Sign: ");
+                colorService.cyan("" + sign.getRisingSign(localDateTime.toLocalTime()));
 
                 System.out.println();
 
