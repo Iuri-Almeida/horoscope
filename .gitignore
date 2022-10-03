@@ -8,6 +8,7 @@
 out/
 .idea/
 *.iml
+META-INF/
 
 # BlueJ files
 *.ctxt
