@@ -34,7 +34,7 @@ public class ValidateService {
         String answer;
         do {
             new ColorService().purple(txt);
-            answer = sc.nextLine().toUpperCase();
+            answer = sc.nextLine().toUpperCase().strip();
         } while (!answer.startsWith("S") && !answer.startsWith("N"));
 
         return answer.startsWith("S");
