@@ -1,4 +1,4 @@
-### Exercício
+## Exercício
 
 Você foi contratado para desenvolver o novo sistema de mapa astral de um grande banco.
 Esse mapa astral não segue totalmente o padrão convencional, porque a empresa decidiu criar o seu próprio com algumas especificações que seguem abaixo:
