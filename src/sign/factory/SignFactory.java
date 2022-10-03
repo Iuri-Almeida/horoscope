@@ -29,7 +29,7 @@ public class SignFactory {
                 return sign;
             }
         }
-        throw new RuntimeException("Wasn't able to find a sign with the date = " + date.getMonth() + "/" + date.getDayOfMonth());
+        throw new IllegalArgumentException("Wasn't able to find a sign with the date = " + date.getMonth() + "/" + date.getDayOfMonth());
     }
 
 }

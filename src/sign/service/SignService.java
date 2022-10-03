@@ -28,7 +28,7 @@ public class SignService {
             }
         }
 
-        throw new RuntimeException("Zone not found for zone = " + zone);
+        throw new IllegalArgumentException("Zone not found for zone = " + zone);
     }
 
 }

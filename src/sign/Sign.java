@@ -28,7 +28,7 @@ public abstract class Sign {
             }
         }
 
-        throw new RuntimeException("Wasn't able to find a sign with the date = " + time.getHour() + ":" + time.getMinute() + ":" + time.getSecond());
+        throw new IllegalArgumentException("Wasn't able to find a sign with the date = " + time.getHour() + ":" + time.getMinute() + ":" + time.getSecond());
 
     }
 
