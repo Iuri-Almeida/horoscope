@@ -50,6 +50,8 @@ public class Main {
                 colorService.cyan("" + sign);
                 colorService.green("\nRising Sign: ");
                 colorService.cyan("" + sign.getRisingSign(localDateTime.toLocalTime()));
+                colorService.green("\nMoon Sign: ");
+                colorService.cyan("" + signService.moonSign(localDateTime.toLocalTime(), zone));
 
                 System.out.println();
 

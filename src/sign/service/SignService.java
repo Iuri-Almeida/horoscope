@@ -21,4 +21,20 @@ public class SignService {
         return ZoneId.of(zone).getRules().getOffset(localDateTime);
     }
 
+    public String moonSign(LocalTime time, String zone) {
+        if (time.isAfter(LocalTime.of(12, 0, 0)) && zone.contains("Recife")) {
+            return "Casimiro";
+        }
+
+        if (time.isBefore(LocalTime.of(12, 0, 0)) && zone.contains("Cuiaba")) {
+            return "Odin";
+        }
+
+        if (zone.contains("Sao_Paulo")) {
+            return "Gandalf";
+        }
+
+        return "Em construção";
+    }
+
 }
